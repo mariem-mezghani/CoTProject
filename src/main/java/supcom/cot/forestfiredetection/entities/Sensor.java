@@ -1,5 +1,6 @@
 package supcom.cot.forestfiredetection.entities;
 
+
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
@@ -14,23 +15,23 @@ public class Sensor implements Serializable  { // Sensor entity for MQTT message
     private String id; //Sensor ID
 
     @Column
-    private Double value; //Value from the Hc-SR04 Ultrasonic sensor which represents the distance between the sensor and the waste.
+    private String value;
 
     public Sensor() {
     }
 
-    public Sensor(String id, Double value) {
+    public Sensor(String id, String value) {
         this.id= id;
         this.value = value;
 
     }
 
 
-//Getters
+    //Getters
     public String getId() {
         return id;
     }
-    public Double getvalue() {
+    public String getvalue() {
         return value;
     }
 
@@ -56,9 +57,9 @@ public class Sensor implements Serializable  { // Sensor entity for MQTT message
     public String toString() {
         return "Sensor{" +
                 "id='" + id + '\'' +
-                ", value=" + value +
+                ", value='" + value +
 
-                '}';
+                "'}";
     }
 
 }

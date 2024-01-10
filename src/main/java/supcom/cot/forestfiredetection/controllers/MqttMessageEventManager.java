@@ -1,5 +1,4 @@
 package supcom.cot.forestfiredetection.controllers;
-
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
@@ -13,6 +12,7 @@ import org.eclipse.paho.mqttv5.common.packet.MqttProperties;
 import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 import supcom.cot.forestfiredetection.entities.Sensor;
+import supcom.cot.forestfiredetection.boundaries.PublishWebsocketEndpoint;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
 @Startup
@@ -78,11 +78,15 @@ public class MqttMessageEventManager {
                 public void messageArrived(String topic, MqttMessage mqttMessage) { // On message receival, construct sensor json object and publish to Websocket
                     JSONObject object = new JSONObject(new String( mqttMessage.getPayload() ));
                     String messageTxt=object.getString("id");
-                    Double value=object.isNull("value") ? null : object.getDouble("value");
-                    Sensor sensor=new Sensor(messageTxt,value);
+                    String image=object.getString("image");
+                    Sensor sensor=new Sensor(messageTxt,image);
                     System.out.println("Message on " + topic + ": '" + messageTxt + "'");
+                    System.out.println(sensor);
+                    PublishWebsocketEndpoint.broadcastMessage(sensor);
                     MqttProperties props = mqttMessage.getProperties();
                     String responseTopic = props.getResponseTopic();
+
+
 
 
                 }
