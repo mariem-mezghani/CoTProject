@@ -65,7 +65,7 @@ HTTPS was enabled using Let's Encrypt's Certbot, allowing us to verify the owner
 ![Project IOT](docs/media/Login-interface.JPG)
 ![Project IOT](docs/media/UserHome-interface.JPG)
 ![Project IOT](docs/media/Menu-interface.JPG)
-![Project IOT](docs/media/Route_to_the_nearest_water_source.JPG)
+![Project IOT](docs/media/Route_to_the_nearest_water source.JPG)
 ## Further Readings
 You can find more detailed information and take a look at the architecture design in the following documents:
 
