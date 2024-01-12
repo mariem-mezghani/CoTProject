@@ -49,7 +49,7 @@ We used our free Microsoft accounts in order to sign in and get 100$ offred by M
   - CPU: 1 GB
   - Storage: 35 GB
 ###  IoT prototype:
-![Project IOT](docs/media/iot.png)
+![Project IOT](docs/media/iot.jpg)
 ### Detection model:
 The Forest Fire Detection system utilizes the YOLOv8 (You Only Look Once version 8) object detection model for accurate and real-time fire detection. YOLOv8 is a state-of-the-art model known for its speed and precision in identifying objects in images and video frames.
 To test the fire detection model on the NVIDIA card, follow these steps:
