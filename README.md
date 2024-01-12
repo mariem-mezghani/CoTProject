@@ -35,11 +35,11 @@ Multiple technologies, packages and hardware sensors were used in order to devel
   -   Mosquitto broker
 #### Hardware:
   -   Nvidea jetson nano 4G
-GPU	: NVIDIA Maxwell architecture with 128 NVIDIA CUDA® cores
-Camera	: 12 lanes (3x4 or 4x2) MIPI CSI-2 D-PHY 1.1 (1.5 Gb/s per pair)
-Connectivity :	Gigabit Ethernet, M.2 Key E
-Display	: HDMI 2.0 and eDP 1.4
-USB	: 4x USB 3.0, USB 2.0 Micro-B
+  - GPU	: NVIDIA Maxwell architecture with 128 NVIDIA CUDA® cores
+  - Camera	: 12 lanes (3x4 or 4x2) MIPI CSI-2 D-PHY 1.1 (1.5 Gb/s per pair)
+  - Connectivity :	Gigabit Ethernet, M.2 Key E
+  - Display	: HDMI 2.0 and eDP 1.4
+  - USB	: 4x USB 3.0, USB 2.0 Micro-B
   -   camera Redragon
 Résolution vidéo max : Full HD 1080p
 30 FPS avec autofocus
