@@ -34,15 +34,15 @@ Multiple technologies, packages and hardware sensors were used in order to devel
 #### Server:
   -   Mosquitto broker
 #### Hardware:
-  -   Nvidea jetson nano 4G
+Nvidea jetson nano 4G
   - GPU	: NVIDIA Maxwell architecture with 128 NVIDIA CUDA® cores
   - Camera	: 12 lanes (3x4 or 4x2) MIPI CSI-2 D-PHY 1.1 (1.5 Gb/s per pair)
   - Connectivity :	Gigabit Ethernet, M.2 Key E
   - Display	: HDMI 2.0 and eDP 1.4
   - USB	: 4x USB 3.0, USB 2.0 Micro-B
-  -   camera Redragon
-Résolution vidéo max : Full HD 1080p
-30 FPS avec autofocus
+camera Redragon
+  - Résolution vidéo max : Full HD 1080p
+  - 30 FPS avec autofocus
 ### Deployment Server:
 We used our free Microsoft accounts in order to sign in and get 100$ offred by Microsoft Azure. This allowed us to create a virtual machine capable of hosting the Middleware (i.e. Jakarta EE), the MQTT Broker (i.e. Mosquitto) and handle several requests without delay. The characteristics of the virtual machine are as follow:
   - Ram: 1 GB
