@@ -40,6 +40,7 @@ Nvidea jetson nano 4G
   - Connectivity :	Gigabit Ethernet, M.2 Key E
   - Display	: HDMI 2.0 and eDP 1.4
   - USB	: 4x USB 3.0, USB 2.0 Micro-B
+
 camera Redragon
   - Résolution vidéo max : Full HD 1080p
   - 30 FPS avec autofocus
