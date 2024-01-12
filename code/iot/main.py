@@ -1,4 +1,5 @@
 import cv2
+import time
 import json
 import paho.mqtt.publish as publish
 import base64
@@ -14,27 +15,30 @@ model = YOLO('best.pt')
 
 # Example usage
 try:
-    # Read an image from file
-    image_path = 'home/jetson/image.jpg'  
-    frame = cv2.imread(image_path)
+    cap = cv2.VideoCapture(0)  # Use the default camera (change the index if needed)
 
-    # YOLO model prediction
-    results = model.predict(frame, conf=0.5, device=0)
+    while True:
+        ret, frame = cap.read()
 
-    # Check if objects are detected
-    if results[0].boxes.xyxy.size(0) > 0:
-        # Convert the image to base64
-        _, buffer = cv2.imencode('.jpg', frame)
-        base64_string = base64.b64encode(buffer).decode()
+        # YOLO model prediction
+        results = model.predict(frame, conf=0.5, device=0)
 
-        # Prepare payload
-        payload = {"id": "1", "image": base64_string}
-        print(payload)
-        json_payload = json.dumps(payload)
+        # Check if objects are detected
+        if results[0].boxes.xyxy.size(0)>0:
+            # Convert the image to base64
+            _, buffer = cv2.imencode('.jpg', frame)
+            base64_string = base64.b64encode(buffer).decode()
 
-        # Send to Mosquitto
-        publish.single(mqtt_topic, json_payload, hostname=mqtt_broker, port=mqtt_port,
-                       auth={'username': 'username', 'password': 'Azureuser12*'})
+            # Prepare payload
+            payload = {"id": "1", "image": base64_string}
+            print(payload)
+            json_payload = json.dumps(payload)
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+            # Send to Mosquitto
+            publish.single(mqtt_topic, json_payload, hostname=mqtt_broker, port=mqtt_port,
+                           auth={'username': 'username', 'password': 'Azureuser12*'})
+
+        time.sleep(60)  # Adjust the sleep time as needed
+
+except KeyboardInterrupt:
+    cap.release()
