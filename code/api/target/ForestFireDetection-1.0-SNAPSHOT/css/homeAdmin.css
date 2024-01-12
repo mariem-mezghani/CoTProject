@@ -1,0 +1,128 @@
+/* colours */
+:root{
+    --primary: #145026;
+    --secondary: #1c6933;
+    --title: #ffffff;
+  }
+  
+  /* layout styles */
+  nav{
+    background: var(--primary);
+    border-bottom: 10px solid var(--secondary);
+  }
+  nav a{
+    text-transform: uppercase;
+    color: var(--title);
+  }
+  nav a span{
+    font-weight: bold;
+  }
+  nav .sidenav-trigger{
+    margin: 0;
+  }
+  
+  /* camera styles */
+  .cameras{
+    margin-top: 20px;
+  }
+  .card-panel.camera{
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 1px 3px rgba(90,90,90,0.1);
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+    grid-template-areas: "image details delete";
+    position: relative;
+  }
+  .camera img{
+    grid-area: image;
+    max-width: 60px;
+  }
+  .camera-details{
+    grid-area: details;
+    margin-top: 6px;
+  }
+  .camera-delete{
+    grid-area: delete;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .camera-delete i{
+    font-size: 18px;
+  }
+  .camera-title{
+    font-weight: bold;
+  }
+  .camera-ingredients{
+    font-size: 0.8em;
+  }
+  
+  /* form-styles */
+  .add-btn{
+    background: var(--title) !important;
+  }
+  input{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+  .side-form button{
+    background: var(--title);
+    box-shadow: 1px 1px 3px rgba(90,90,90,0.2);
+  }
+  form .input-field{
+    margin-top: 30px;
+  }
+
+  #menu-icon {
+    color: #ffffff; /* Blanc */
+  }
+    .btn-floating {
+    background-color: #ffffff; /* Blanc */
+    color: #000000; /* Couleur du texte (par exemple, noir) */
+  }
+
+  .btn-floating {
+    background-color: #ff0000; /* Blanc */
+    color: #000000; /* Couleur du texte (par exemple, noir) */
+  }
+
+  .add-btn {
+    background: #1c6933 !important; 
+    color: var(--title) !important; 
+  }
+
+  /* Ajoutez ces styles à votre feuille de style CSS */
+
+.card-panel.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-details {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.user-image {
+  width: 50px; 
+  height: 50px;
+  margin-right: 16px; /* Ajustez la marge comme nécessaire */
+}
+
+.user-delete {
+  cursor: pointer;
+}
+
+/* Ajoutez ce style pour centrer verticalement le texte dans user-details */
+.user-title,
+.user-ingredients {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Ajoutez ce style pour aligner l'icône de suppression au bas du conteneur */
+.user-delete {
+  align-self: flex-end;
+}

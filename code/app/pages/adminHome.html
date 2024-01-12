@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ForestFireDetection</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/homeAdmin.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/pages/adminHome.html">ForestFire<span>Detection</span></a>
+      <span class="right grey-text text-darken-1">
+        <i id="menu-icon" class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">ForestFireDetection</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a href="/pages/home.html" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/pages/map.html" class="waves-effect"><i class="material-icons">map</i>Map</a></li>
+    <li><a href="/pages/about.html" class="waves-effect"><i class="material-icons">info_outline</i>About</a></li>
+    <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a></li>
+  </ul>
+
+<!-- users -->
+<div class="users container grey-text text-darken-1"></div>
+<div class="center">
+  <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+
+<!-- add user side nav -->
+<div id="side-form" class="sidenav side-form">
+  <form class="add-user container section">
+    <h6 >New user</h6>
+    <div class="divider"></div>
+    <div class="input-field">
+      <input placeholder="User" id="fullname" type="text" class="validate">
+      <label for="fullname">user Fullname</label>
+    </div>
+    <div class="input-field">
+      <input placeholder="user@example.com" id="email" type="text" class="validate">
+      <label for="email">Email</label>
+    </div>      
+    <div class="input-field">
+      <input placeholder="password" id="password" type="password" class="validate">
+      <label for="password">password</label>
+    </div>
+    <div class="input-field center">
+      <button type="button" class="btn-small" onclick="addUser()" >Add</button>
+    </div>
+  </form>
+</div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/addUser.js"></script>
+  <script src="/js/loadUsers.js"></script>
+</body>
+</html>
